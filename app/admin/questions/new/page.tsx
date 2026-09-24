@@ -1,0 +1,2 @@
+import { QuestionForm } from '@/components/admin/QuestionForm';
+export default function NewQuestionPage() { return <main className="min-h-screen px-5 py-14 sm:py-20"><div className="mx-auto max-w-5xl"><p className="font-mono text-[10px] tracking-[.18em] text-amber-300">PRIVATE ADMIN</p><h1 className="mt-4 text-4xl font-medium text-zinc-100">New question</h1><div className="mt-8"><QuestionForm /></div></div></main>; }

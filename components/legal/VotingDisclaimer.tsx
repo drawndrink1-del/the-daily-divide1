@@ -1,0 +1,3 @@
+export function VotingDisclaimer() {
+  return <section className="border border-zinc-800 bg-zinc-900/30 p-5 sm:p-6"><h2 className="text-lg text-zinc-200">About the results</h2><p className="mt-3 text-sm leading-7 text-zinc-500">Daily Divide results represent responses submitted through this website. They are not necessarily representative of the general population. Confidence and decision-time values are observational metrics: decision time is measured by the website and may not perfectly represent actual deliberation. Results can change as additional votes are submitted, and historical results reflect the votes collected for that question.</p></section>;
+}

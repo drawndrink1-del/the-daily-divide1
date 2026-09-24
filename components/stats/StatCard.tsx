@@ -1,0 +1,3 @@
+'use client';
+import { motion } from 'framer-motion';
+export function StatCard({ label, value, detail, accent = 'amber' }: { label: string; value: string; detail: string; accent?: 'amber' | 'indigo' }) { return <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="border border-zinc-800 bg-zinc-900/40 p-5"><p className="font-mono text-[10px] tracking-[.18em] text-zinc-600">{label}</p><p className={`mt-5 font-mono text-2xl tracking-tight ${accent === 'amber' ? 'text-amber-300' : 'text-indigo-300'}`}>{value}</p><p className="mt-2 text-xs leading-5 text-zinc-500">{detail}</p></motion.div>; }

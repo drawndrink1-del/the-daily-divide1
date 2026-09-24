@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { color-scheme: dark; --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif; --font-mono: 'SFMono-Regular', Consolas, monospace; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #09090b; color: #f4f4f5; font-family: var(--font-sans); }
+button, input { font: inherit; }
+::selection { background: #f59e0b; color: #09090b; }
+.noise { background-image: radial-gradient(rgba(255,255,255,.06) .6px, transparent .6px); background-size: 5px 5px; }
+.grid-fade { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(to bottom, black, transparent 85%); }
+@keyframes pulse-ring { 0%, 100% { box-shadow: 0 0 0 0 rgba(245,158,11,.42); } 50% { box-shadow: 0 0 0 8px rgba(245,158,11,0); } }
+.pulse-ring { animation: pulse-ring 2s ease-in-out infinite; }

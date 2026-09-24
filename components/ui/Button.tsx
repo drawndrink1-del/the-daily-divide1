@@ -1,0 +1,2 @@
+import { ArrowRight } from 'lucide-react';
+export function Button({ children, onClick, disabled = false }: { children: React.ReactNode; onClick?: () => void; disabled?: boolean }) { return <button disabled={disabled} onClick={onClick} className="group inline-flex items-center justify-center gap-3 rounded-sm bg-zinc-100 px-5 py-3 text-xs font-bold tracking-[.12em] text-zinc-950 transition hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-40">{children}<ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></button>; }
