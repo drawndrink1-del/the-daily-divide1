@@ -43,7 +43,7 @@ export function DailyDivide({ question }: { question: Question | null }) {
     }
   }, [question]);
 
-  if (!question) return null;
+  if (!question) return <main className="relative min-h-[calc(100vh-74px)] overflow-hidden"><Container className="relative py-12 sm:py-20"><p className="font-mono text-[10px] uppercase tracking-[.18em] text-zinc-500">Today&apos;s Divide isn&apos;t available yet.</p></Container></main>;
   if (isLoadingResults) return <main className="relative min-h-[calc(100vh-74px)] overflow-hidden"><Container className="relative py-12 sm:py-20"><p className="font-mono text-[10px] uppercase tracking-[.18em] text-zinc-500">Loading the divide...</p></Container></main>;
   if (revealed && storedVote) return <ResultsDashboard question={question} userVote={storedVote} votes={resultsVotes} />;
 

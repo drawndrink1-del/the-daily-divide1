@@ -28,9 +28,9 @@ export function mapQuestionRow(row: QuestionRow): Question {
 
 export async function getPublishedQuestionForDate(date: string): Promise<Question | null> {
   const supabase = getSupabaseAdmin();
-  const { data, error } = await supabase.from('questions').select('*').eq('date', date).eq('published', true).maybeSingle();
+  const { data, error } = await supabase.from('questions').select('*').eq('date', date).maybeSingle();
   if (error) throw error;
-  return data ? mapQuestionRow(data as QuestionRow) : null;
+  return data && data.published === true ? mapQuestionRow(data as QuestionRow) : null;
 }
 
 export async function getPublishedQuestionsBefore(date: string): Promise<Question[]> {
